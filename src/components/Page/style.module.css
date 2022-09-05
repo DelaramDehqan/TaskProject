@@ -1,0 +1,59 @@
+.container{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.btnGroup{
+ align-self: center;
+ display: flex;
+ gap: 7px;
+ box-sizing: border-box;
+ text-transform: uppercase;
+  transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform 0.3s;
+}
+.button {
+  perspective:500px;
+  border-radius: 2px;
+  border: 1px solid #eaec6e;
+  background: linear-gradient(
+    to right,
+    #f8fa78,
+    #98e78a
+  );  
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(3, 4, 68);
+  cursor: pointer;
+  transition: border-color 0.5s;
+  width: 170px;
+  transform: rotateY(0) translateZ(24px);
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+button:after {
+  content: '➼';
+  position: absolute;
+  opacity: 0;  
+  top: 10px;
+  right: -50px;
+  transition: 0.5s;
+}
+
+button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+  background-image: linear-gradient(90deg, #83f4b2 0%, #eee535 49%, #f69292 80%, #95dbf3 100%);
+   animation:slidebg 8s linear infinite;
+   height: 50px;
+}
+
+button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
